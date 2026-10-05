@@ -46,6 +46,16 @@ def index():
         "index.html", message=message, status_class=status_class
     )
 
+@app.route("/about")
+def about():
+    """Menampilkan halaman informasi aplikasi."""
+    return "Aplikasi Login Aman - Praktikum DevSecOps P12"
+
+
+@app.route("/health")
+def health():
+    """Endpoint pengecekan status aplikasi."""
+    return "OK"
 
 if __name__ == "__main__":
     init_db()
